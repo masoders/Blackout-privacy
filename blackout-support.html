@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blackout Support</title>
+  <meta name="description" content="Support page for Blackout, a space weather risk overview app.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #0b0d10;
+      --card: #151922;
+      --text: #f4f6f8;
+      --muted: #aab3c0;
+      --line: #2a3140;
+      --accent: #f4c542;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 56px 0;
+    }
+
+    header {
+      margin-bottom: 40px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 4.5rem);
+      line-height: 1;
+      margin: 0 0 16px;
+      letter-spacing: -0.05em;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      margin: 0 0 12px;
+    }
+
+    p { margin: 0 0 16px; }
+
+    .lead {
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 1.18rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 24px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.2rem;
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 650;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .full { grid-column: 1 / -1; }
+
+    .muted { color: var(--muted); }
+
+    footer {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 720px) {
+      main { padding: 36px 0; }
+      .grid { grid-template-columns: 1fr; }
+      section { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="eyebrow">Blackout Support</div>
+      <h1>Space weather, translated.</h1>
+      <p class="lead">Blackout displays public NASA and NOAA space weather information as simple operational risk levels for geomagnetic storms, radio blackouts, and solar radiation storms.</p>
+    </header>
+
+    <div class="grid">
+      <section>
+        <h2>What the app shows</h2>
+        <ul>
+          <li>Geomagnetic storm activity</li>
+          <li>Radio blackout risk</li>
+          <li>Solar radiation storm levels</li>
+          <li>Recent solar flare and CME events</li>
+          <li>Plain-language impact summaries</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Data sources</h2>
+        <ul>
+          <li>NASA DONKI API</li>
+          <li>NOAA Space Weather Prediction Center public feeds</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Support</h2>
+        <p class="muted">For support, bug reports, or feedback, contact:</p>
+        <p><a href="mailto:masoders@gmail.com">masoders@gmail.com</a></p>
+      </section>
+
+      <section>
+        <h2>Privacy</h2>
+        <p class="muted">Blackout does not require an account and does not request device location.</p>
+        <p><a href="./privacy.html">Privacy Policy</a></p>
+      </section>
+
+      <section class="full">
+        <h2>Important disclaimer</h2>
+        <p class="muted">Blackout is an informational overview app. It is not a certified warning system, navigation system, emergency service, aviation system, maritime safety system, or power-grid operations tool. Always rely on official authorities and operational procedures for safety-critical decisions.</p>
+      </section>
+    </div>
+
+    <footer>
+      <p>© 2026 Blackout. Public data remains the property of its respective providers.</p>
+    </footer>
+  </main>
+</body>
+</html>
